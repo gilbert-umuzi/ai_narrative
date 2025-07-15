@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Nation's Digital Future: Navigating the AI Shift in Global Services (2025-2028)</title>
+    <title>A Blueprint for a Digital Future: Navigating the AI Shift (2025-2028)</title>
     <style>
         :root {
             --primary-color: #8B0000;
@@ -40,12 +40,14 @@
         
         h2 {
             font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 1em;
         }
         
         h3 {
             font-size: 1.4rem;
         }
-        
+
         .main-content {
             grid-column: 1;
         }
@@ -81,6 +83,42 @@
             padding-bottom: 10px;
         }
         
+        .character-intro {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: var(--highlight-color);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .character-card {
+            text-align: center;
+        }
+
+        .character-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .character-card h4 {
+            margin: 0;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+        
+        .character-card p {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.4;
+        }
+
         .year-summary {
             background-color: var(--highlight-color);
             border: 1px solid var(--border-color);
@@ -97,26 +135,71 @@
             margin-bottom: 15px;
         }
         
-        .path-summary {
-            background-color: var(--highlight-color);
-            border: 1px solid var(--border-color);
+        .decision-point {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background-color: var(--secondary-color);
+            color: white;
             border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
         }
-        
-        .path-a-summary {
+
+        .decision-point h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .decision-paths {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .decision-path-btn {
+            display: block;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 2px solid;
+            cursor: pointer;
+        }
+
+        .path-a-btn {
+            background-color: skyblue;
+            color: var(--secondary-color);
+            border-color: skyblue;
+        }
+
+        .path-b-btn {
+            background-color: lightgreen;
+            color: var(--secondary-color);
+            border-color: lightgreen;
+        }
+
+        .decision-path-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .path-outcome-description {
+            display: none;
+            padding: 20px;
+            margin-top: -20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .path-a-outcome {
+            background-color: rgba(135, 206, 250, 0.2);
             border-left: 5px solid skyblue;
         }
         
-        .path-b-summary {
+        .path-b-outcome {
+            background-color: rgba(144, 238, 144, 0.2);
             border-left: 5px solid lightgreen;
-        }
-        
-        .path-summary h3 {
-            margin-top: 0;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
         }
         
         .takeaway {
@@ -134,30 +217,6 @@
             border-bottom: 1px solid #eee;
             padding-bottom: 8px;
             margin-bottom: 12px;
-        }
-        
-        .key-stats {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        
-        .key-stat {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .stat-label {
-            font-weight: 500;
-        }
-        
-        .stat-value {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--primary-color);
         }
         
         .phase-overview {
@@ -206,38 +265,28 @@
             text-decoration: underline;
         }
         
-        .phase-nav {
+        .key-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .key-stat {
             display: flex;
             justify-content: space-between;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
         }
         
-        .phase-nav a {
-            text-decoration: none;
-            color: var(--primary-color);
+        .stat-label {
+            font-weight: 500;
+        }
+        
+        .stat-value {
+            font-size: 1.2rem;
             font-weight: bold;
-            padding: 8px 16px;
-            border: 1px solid var(--primary-color);
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-        
-        .phase-nav a:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        
-        .phase-nav .inactive {
-            color: #999;
-            border-color: #999;
-            cursor: not-allowed;
-        }
-        
-        .phase-nav .inactive:hover {
-            background-color: transparent;
-            color: #999;
+            color: var(--primary-color);
         }
         
         @media (max-width: 768px) {
@@ -257,75 +306,91 @@
     </style>
 </head>
 <body>
-    <h1>A Nation's Digital Future: Navigating the AI Shift in Global Services (2025-2028)</h1>
+    <h1>A Blueprint for a Digital Future: Navigating the AI Shift (2025-2028)</h1>
     
     <div class="main-content">
         <div class="phase-tag">Scenario Summary</div>
         
-        <p>This scenario explores a nation's digital economy trajectory from 2025 to 2028, focusing on how artificial intelligence will transform the Global Business Services (GBS) sector and digital employment opportunities. The narrative follows four characters through this transformation, illustrating key decision points and potential outcomes based on strategic choices.</p>
-        
+        <p>This scenario explores a nation's digital economy trajectory from 2025 to 2028, focusing on how artificial intelligence will transform the global services sector and digital employment opportunities. The narrative illustrates key decision points and potential outcomes based on strategic choices made by a nation and its workforce.</p>
+
+        <h3>Meet the Characters</h3>
+        <p>We follow four characters whose careers evolve alongside AI technology. Each represents a different digital career pathway that will be affected by AI in unique ways:</p>
+        <div class="character-intro">
+            <div class="character-card">
+                <img src="assets/images/Amina 1.png" alt="Amina">
+                <h4>Amina</h4>
+                <p>Customer Service Representative</p>
+            </div>
+            <div class="character-card">
+                <img src="assets/images/David 1.png" alt="David">
+                <h4>David</h4>
+                <p>Technical Support Engineer</p>
+            </div>
+            <div class="character-card">
+                <img src="assets/images/Bella 1.png" alt="Bella">
+                <h4>Bella</h4>
+                <p>Freelance Designer</p>
+            </div>
+            <div class="character-card">
+                <img src="assets/images/Eric 1.png" alt="Eric">
+                <h4>Eric</h4>
+                <p>Software Developer</p>
+            </div>
+        </div>
+
         <div class="year-summary">
             <h3>2025 - 2026: The Strong Foundation & Rising Tide</h3>
-            <p>This nation's GBS Growth Initiative shows strong early momentum, attracting investment and creating jobs in CSR and entry-level Tech Support. Policies are working, leveraging its stability and cost-to-quality advantages. AI is present as an augmentation tool (CoPilot, accent adaptation), boosting productivity slightly. Freelancing grows. Benchmarks show AI still struggles with complex conversational tasks. A strategic question emerges within the Digital Inclusion Council (DIC): focus solely on scaling current GBS models or proactively diversify towards potentially more AI-resilient digital skills pathways?</p>
+            <p>The country's national digital jobs initiative shows strong early momentum, attracting investment and creating tens of thousands of jobs in customer service and entry-level tech support. A strategic question emerges within the national digital taskforce: focus solely on scaling current service delivery models or proactively diversify towards more AI-resilient skills pathways?</p>
+            <div class="decision-point">
+                <h2>A Critical Choice for the Nation</h2>
+                <p>In late 2025, the national digital taskforce faces a crucial decision. Which path should they choose?</p>
+                <div class="decision-paths">
+                    <div id="path-a-btn" class="decision-path-btn path-a-btn">Path A: Focus on Momentum</div>
+                    <div id="path-b-btn" class="decision-path-btn path-b-btn">Path B: Proactive Adaptation</div>
+                </div>
+            </div>
+            
+            <div id="path-a-outcome" class="path-outcome-description path-a-outcome">
+                <h3>Path A: The Momentum Outcome</h3>
+                <p>The nation faces a significant skills mismatch. Thousands trained for basic roles find limited demand. Ambitious job targets are missed and sector growth stalls. The government resorts to reactive, costly reskilling efforts.</p>
+            </div>
+            
+            <div id="path-b-outcome" class="path-outcome-description path-b-outcome">
+                <h3>Path B: The Proactive Adaptation Outcome</h3>
+                <p>Early diversification pays off. Pathways developed for advanced and AI-centric roles produce employable graduates. The nation successfully competes for AI-augmented service contracts. The job target is met with higher-skilled, higher-paid, resilient roles, and the nation gains a reputation for adaptability.</p>
+            </div>
         </div>
         
         <div class="year-summary">
             <h3>2026 - 2027: Acceleration & Shifting Ground</h3>
-            <p>Global AI capabilities accelerate. Advanced models (GPT-5 level) and AI Agents capable of autonomous digital tasks are released. AI coding assistants can solve well-specified coding problems extremely quickly, outperforming junior developers. Leading tech firms like Microsoft begin aggressively integrating AI into core services, including enterprise support (CoPilot resolving ~50% of L1 tickets). Local BPOs like Teknowledge adapt by retraining L1 staff for AI collaboration and escalation handling. Promotion timelines shorten for AI-savvy staff. Competition intensifies for freelancers as AI tools automate basic design and writing tasks.</p>
+            <p>Global AI capabilities accelerate. Advanced AI models and autonomous agents are released, outperforming junior developers and automating a significant portion of entry-level support tickets. Local service providers adapt by retraining staff for AI collaboration and escalation handling. Competition intensifies for freelancers as AI tools automate basic tasks.</p>
         </div>
         
         <div class="year-summary">
             <h3>2027 - 2028: The Tangible Disruption</h3>
-            <p>A breakthrough AI voice agent demo handling complex customer service calls goes viral, crossing key performance thresholds (~90% JGA/SR). Microsoft restructures global support contracts, significantly reducing demand for human L1 agents and increasing demand for L2/L3 specialists and AI oversight roles. Teknowledge freezes L1 hiring in this nation, focusing entirely on retraining for higher-level, AI-augmented roles. Other local BPOs face client pressure to follow suit, though implementation lags. AI coding maturity effectively collapses the global market for junior developers doing routine tasks. Local trainees face extended programs and uncertain job prospects in pure coding. Freelancers must specialize to remain competitive.</p>
-        </div>
-        
-        <h2>Branch Point: Momentum vs. Adaptation (Decision made in late 2025)</h2>
-        
-        <div class="path-summary path-a-summary">
-            <h3>Path A (Momentum Outcome - Mid 2028)</h3>
-            <p>This nation faces a significant skills mismatch. Thousands trained for basic CSR/L1 roles find limited demand. The 20,000 GBS job target is missed; sector growth stalls. Youth unemployment persists. This nation struggles to compete for next-gen AI-augmented GBS contracts. Government resorts to reactive, costly reskilling efforts.</p>
-        </div>
-        
-        <div class="path-summary path-b-summary">
-            <h3>Path B (Proactive Adaptation Outcome - Mid 2028)</h3>
-            <p>Early diversification pays off. Pathways developed in 2025/26 for advanced Tech Support, AI Interaction QA, and resilient Platform Work niches produce employable graduates. This nation successfully competes for AI-augmented GBS/support contracts. The 20,000 job target is met differently – fewer total jobs, but higher-skilled, higher-paid, resilient roles driving knowledge economy growth. This nation gains a reputation for adaptability.</p>
+            <p>A breakthrough AI voice agent goes viral, crossing key performance thresholds. Major tech firms restructure support contracts, drastically reducing demand for human entry-level agents. Local firms freeze hiring for these roles, focusing entirely on retraining for higher-level, AI-augmented positions. The global market for junior developers doing routine tasks collapses.</p>
         </div>
         
         <h2>Scenario Takeaways</h2>
         
         <div class="takeaway">
-            <h4>GBS/BPO Model is Vulnerable</h4>
-            <p>This nation's current successful strategy, heavily reliant on scaling traditional CSR and L1 Tech Support, faces significant disruption risk from AI automation likely within the 2027-2028 timeframe, based on current capability trajectories.</p>
+            <h4>The Traditional Service Model is Vulnerable</h4>
+            <p>A strategy reliant on scaling traditional customer service and entry-level tech support faces significant disruption risk from AI automation within the 2027-2028 timeframe.</p>
         </div>
         
         <div class="takeaway">
-            <h4>AI Augmentation Precedes Substitution, but Substitution Follows</h4>
-            <p>AI will initially enhance productivity (2025-2026), but rapidly improving capabilities (demonstrated by benchmarks and leading tech firm actions) will likely lead to substitution for routine cognitive tasks in customer service and tech support starting around 2027.</p>
+            <h4>Augmentation Precedes Substitution</h4>
+            <p>AI will initially enhance productivity, but rapidly improving capabilities will lead to substitution for routine cognitive tasks starting around 2027.</p>
         </div>
         
         <div class="takeaway">
             <h4>Skills Demand is Shifting Urgently</h4>
-            <p>Demand will rapidly decline for basic, procedural roles and surge for skills complementary to AI: complex problem-solving, critical thinking, empathy (for escalations), AI tool management, quality assurance for AI interactions, and specialized technical expertise (Cloud, Security).</p>
+            <p>Demand will decline for basic roles and surge for skills complementary to AI: complex problem-solving, critical thinking, empathy, and AI tool management.</p>
         </div>
         
         <div class="takeaway">
             <h4>Proactive Adaptation is Crucial</h4>
-            <p>Waiting for widespread job losses before shifting skills strategies (Path A) leads to significant economic and social costs. Early, deliberate diversification of training pathways (Path B), even when current demand seems strong for older models, is essential for resilience.</p>
-        </div>
-        
-        <div class="takeaway">
-            <h4>"Coding" Needs Redefinition</h4>
-            <p>National targets like "1M Coders" require re-evaluation. The future likely needs fewer routine coders but more professionals skilled in AI-augmented development, software architecture, security, and applying code/AI in various digital roles.</p>
-        </div>
-        
-        <div class="takeaway">
-            <h4>Freelancing Requires Strategic Niche Selection</h4>
-            <p>Platform work remains viable but requires moving beyond easily automated tasks towards strategic consulting, deep specialisation, or managing complex AI-driven projects.</p>
-        </div>
-        
-        <div class="takeaway">
-            <h4>The Window is Short</h4>
-            <p>The scenario suggests the critical period for strategic adaptation is now (2025-2026) before the most significant disruptions manifest globally and locally (2027-2028). Policy and investment decisions made today will determine this nation's competitiveness in the AI-driven service economy.</p>
+            <p>Waiting for job losses before shifting skills strategies leads to significant economic and social costs. Early, deliberate diversification of training is essential for resilience.</p>
         </div>
         
         <h2>Explore the Full Scenario</h2>
@@ -334,7 +399,7 @@
             <div class="phase-card">
                 <div class="phase-card-content">
                     <h4>Phase 1: Q3 2025</h4>
-                    <p>The Strong Foundation & Rising Tide - Rwanda's GBS sector shows promising growth with AI tools enhancing productivity, while a strategic decision point emerges about future pathways.</p>
+                    <p>The Strong Foundation & Rising Tide - The nation's digital services sector shows promising growth, while a strategic decision point emerges about future pathways.</p>
                     <a href="phase1.html" class="phase-card-link">Read Phase 1 →</a>
                 </div>
             </div>
@@ -342,7 +407,7 @@
             <div class="phase-card">
                 <div class="phase-card-content">
                     <h4>Phase 2: Early 2026</h4>
-                    <p>Acceleration & Shifting Ground - Advanced AI capabilities emerge globally, changing how work is done and beginning to transform technical support and software development.</p>
+                    <p>Acceleration & Shifting Ground - Advanced AI capabilities emerge globally, beginning to transform technical support and software development.</p>
                     <a href="phase2.html" class="phase-card-link">Read Phase 2 →</a>
                 </div>
             </div>
@@ -350,7 +415,7 @@
             <div class="phase-card">
                 <div class="phase-card-content">
                     <h4>Phase 3: Early 2027</h4>
-                    <p>The Tangible Disruption - Breakthrough AI capabilities for customer service and coding create tangible disruption in Rwanda's digital sector as demand for L1 roles diminishes.</p>
+                    <p>The Tangible Disruption - Breakthrough AI capabilities create tangible disruption as demand for entry-level roles diminishes.</p>
                     <a href="phase3.html" class="phase-card-link">Read Phase 3 →</a>
                 </div>
             </div>
@@ -358,55 +423,21 @@
             <div class="phase-card">
                 <div class="phase-card-content">
                     <h4>Phase 4: Early 2028</h4>
-                    <p>Acceleration & Workforce Realignment - Full-scale transformation occurs as AI handles most routine tasks, with contrasting outcomes based on Rwanda's strategic choices.</p>
+                    <p>Acceleration & Workforce Realignment - Full-scale transformation occurs as AI handles most routine tasks, with contrasting outcomes based on the nation's strategic choices.</p>
                     <a href="phase4.html" class="phase-card-link">Read Phase 4 →</a>
                 </div>
             </div>
-        </div>
-        
-        <div class="phase-nav">
-            <a href="#" class="inactive">Previous</a>
-            <a href="phase1.html">Begin With Phase 1: Q3 2025</a>
         </div>
     </div>
     
     <div class="sidebar">
         <div class="visualization">
             <h3>About This Scenario</h3>
-            <p>This scenario examines how a nation's digital service sector might navigate the rapid advancement of AI from 2025 to 2028. It follows four characters whose careers evolve alongside AI technology through four distinct phases of development.</p>
-            <p>Each character represents a different digital career pathway that will be affected by AI in unique ways:</p>
-            <ul>
-                <li><strong>Amina</strong> - Customer Service Representative</li>
-                <li><strong>David</strong> - Technical Support Engineer</li>
-                <li><strong>Bella</strong> - Freelance Designer</li>
-                <li><strong>Eric</strong> - Software Developer</li>
-            </ul>
+            <p>This scenario examines how a nation's digital service sector might navigate the rapid advancement of AI from 2025 to 2028, following four characters whose careers evolve alongside the technology.</p>
         </div>
         
         <div class="visualization">
-            <h3>Key Metrics (2028)</h3>
-            <div class="key-stats">
-                <div class="key-stat">
-                    <div class="stat-label">Current GBS Employment:</div>
-                    <div class="stat-value">8,000</div>
-                </div>
-                <div class="key-stat">
-                    <div class="stat-label">2030 Employment Target:</div>
-                    <div class="stat-value">20,000</div>
-                </div>
-                <div class="key-stat">
-                    <div class="stat-label">National Coders Goal:</div>
-                    <div class="stat-value">1,000,000</div>
-                </div>
-                <div class="key-stat">
-                    <div class="stat-label">ICT Professionals Goal:</div>
-                    <div class="stat-value">500,000</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="visualization">
-            <h3>AI Impact by Phase</h3>
+            <h3>AI Progress Summary</h3>
             <div class="key-stats">
                 <div class="key-stat">
                     <div class="stat-label">Phase 1 (2025):</div>
@@ -430,30 +461,19 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Animation for stats loading
-            const animateValue = (obj, start, end, duration) => {
-                let startTimestamp = null;
-                const step = (timestamp) => {
-                    if (!startTimestamp) startTimestamp = timestamp;
-                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                    obj.innerHTML = Math.floor(progress * (end - start) + start);
-                    if (progress < 1) {
-                        window.requestAnimationFrame(step);
-                    }
-                };
-                window.requestAnimationFrame(step);
-            };
-            
-            // Animate numeric values
-            const numericStats = document.querySelectorAll('.stat-value');
-            numericStats.forEach(stat => {
-                const value = parseInt(stat.innerText.replace(/,/g, ''));
-                if (!isNaN(value)) {
-                    stat.innerText = '0';
-                    setTimeout(() => {
-                        animateValue(stat, 0, value, 1500);
-                    }, 300);
-                }
+            const pathABtn = document.getElementById('path-a-btn');
+            const pathBBtn = document.getElementById('path-b-btn');
+            const pathAOutcome = document.getElementById('path-a-outcome');
+            const pathBOutcome = document.getElementById('path-b-outcome');
+
+            pathABtn.addEventListener('click', function() {
+                pathAOutcome.style.display = 'block';
+                pathBOutcome.style.display = 'none';
+            });
+
+            pathBBtn.addEventListener('click', function() {
+                pathBOutcome.style.display = 'block';
+                pathAOutcome.style.display = 'none';
             });
         });
     </script>

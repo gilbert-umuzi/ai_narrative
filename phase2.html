@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Nation's Digital Future: Navigating the AI Shift in Global Services (2025-2028)</title>
+    <title>A Blueprint for a Digital Future: Navigating the AI Shift (2025-2028)</title>
     <style>
         :root {
             --primary-color: #8B0000;
@@ -81,32 +81,6 @@
             padding-bottom: 10px;
         }
         
-        .chart-container {
-            width: 100%;
-            margin: 15px 0;
-        }
-        
-        .chart-caption {
-            font-size: 0.85rem;
-            color: #555;
-            margin-top: 10px;
-            line-height: 1.4;
-        }
-        
-        .full-width-chart {
-            background-color: var(--highlight-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
-            margin: 30px 0;
-        }
-        
-        .full-width-chart h3 {
-            margin-top: 0;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-        
         .workforce-profiles {
             display: flex;
             flex-direction: column;
@@ -116,22 +90,21 @@
         
         .persona {
             display: flex;
+            align-items: center;
             background-color: #f8f8f8;
             border: 1px solid #ddd;
-            padding: 0;
+            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            overflow: hidden;
         }
         
         .persona-image {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             flex-shrink: 0;
+            margin-right: 20px;
             background-color: #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border-radius: 8px;
             overflow: hidden;
         }
         
@@ -142,7 +115,6 @@
         }
         
         .persona-content {
-            padding: 15px;
             flex-grow: 1;
         }
         
@@ -152,24 +124,6 @@
             border-bottom: 1px solid #eee;
             padding-bottom: 8px;
             margin-bottom: 12px;
-        }
-        
-        details {
-            background-color: var(--highlight-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 10px 15px;
-            margin-bottom: 20px;
-        }
-        
-        summary {
-            font-weight: bold;
-            cursor: pointer;
-            padding: 5px 0;
-        }
-        
-        summary:hover {
-            color: var(--primary-color);
         }
         
         .key-stats {
@@ -194,89 +148,6 @@
             font-size: 1.2rem;
             font-weight: bold;
             color: var(--primary-color);
-        }
-        
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            border-bottom: 1px dotted var(--primary-color);
-            cursor: help;
-        }
-        
-        .tooltip .tooltip-text {
-            visibility: hidden;
-            width: 250px;
-            background-color: var(--secondary-color);
-            color: white;
-            text-align: center;
-            border-radius: 6px;
-            padding: 10px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -125px;
-            opacity: 0;
-            transition: opacity 0.3s;
-            font-size: 0.9rem;
-        }
-        
-        .tooltip:hover .tooltip-text {
-            visibility: visible;
-            opacity: 1;
-        }
-        
-        .reference-tooltip {
-            position: relative;
-            display: inline-block;
-            cursor: help;
-        }
-        
-        .reference-marker {
-            color: var(--primary-color);
-            font-size: 0.8rem;
-            vertical-align: super;
-        }
-        
-        .reference-tooltip .tooltip-text {
-            visibility: hidden;
-            width: 250px;
-            background-color: var(--secondary-color);
-            color: white;
-            text-align: center;
-            border-radius: 6px;
-            padding: 10px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -125px;
-            opacity: 0;
-            transition: opacity 0.3s;
-            font-size: 0.9rem;
-        }
-        
-        .reference-tooltip:hover .tooltip-text {
-            visibility: visible;
-            opacity: 1;
-        }
-        
-        .progress-container {
-            width: 100%;
-            background-color: #e0e0e0;
-            border-radius: 5px;
-            margin: 10px 0;
-        }
-        
-        .progress-bar {
-            height: 20px;
-            background-color: var(--primary-color);
-            border-radius: 5px;
-            width: 25%; /* 5,000 out of 20,000 */
-            text-align: right;
-            color: white;
-            font-weight: bold;
-            padding-right: 5px;
         }
         
         .phase-nav {
@@ -318,45 +189,34 @@
             
             .persona {
                 flex-direction: column;
+                align-items: flex-start;
             }
             
             .persona-image {
                 width: 100%;
-                height: 200px;
+                height: 250px;
+                margin-right: 0;
+                margin-bottom: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <h1>A Nation's Digital Future: Navigating the AI Shift in Global Services (2025-2028)</h1>
+    <h1>A Blueprint for a Digital Future: Navigating the AI Shift (2025-2028)</h1>
     
     <div class="main-content">
         <div class="phase-tag">Phase 2: Early 2026</div>
         <h2>Acceleration & Shifting Ground</h2>
         
-        <p>The global pace of AI development accelerates through the latter half of 2025. OpenAI releases GPT-5, showcasing markedly improved reasoning, context handling, and coding proficiency over its predecessor. Concurrently, Google unveils advanced "AI Agents" – models capable of autonomously planning and executing multi-step tasks within digital environments, demonstrating sophisticated tool use and interaction with web interfaces. They can book flights, accommodation, even do your shopping. They are a little clunky, often asking for human input, and make mistakes.</p>
+        <p>The global pace of AI development accelerates. Advanced models and "AI Agents" capable of autonomous digital tasks are released. AI coding assistants become ubiquitous, reliably handling a vast majority of standard coding tasks. This technological momentum translates directly into operational shifts within leading global enterprises, which begin to aggressively integrate these new capabilities into their core products and support structures.</p>
         
-        <p>AI coding assistants become ubiquitous in development workflows; while still requiring human oversight for complex architectural decisions or long-horizon projects <span class="reference-tooltip" data-reference="METR"><span class="reference-marker">[7]</span><span class="tooltip-text">METR Analysis of AI Task Capabilities, 2026</span></span>, they now reliably handle a vast majority of standard coding, testing, and documentation tasks that occupied junior developers just months prior. Front-end development tools, like the Lovable.dev platform <span class="reference-tooltip" data-reference="Awesomity Interview, Apr 2025"><span class="reference-marker">[2]</span><span class="tooltip-text">Interview with Awesomity Labs CEO, April 2025</span></span>, evolve rapidly, moving beyond simple UI mockups to generate functional, interactive user interface code from design specifications or natural language prompts. This is seen as a major step towards fully automating at least junior front-end web developers.</p>
-        
-        <p>This technological momentum translates directly into operational shifts within leading global enterprises. Microsoft, committed to realizing ROI on its massive AI investments, aggressively integrates these new capabilities into its core products and support structures. Its CoPilot for Enterprise Support is enhanced with GPT-5 level reasoning and agentic capabilities, enabling it to autonomously resolve an estimated 40-50% of previously human-handled L1 support tickets related to common issues like password resets, software configuration, and permissions management across the Microsoft 365 and Azure ecosystems.</p>
-        
-        <p>A leading local BPO firm, as a primary Microsoft support partner, experiences this shift directly within its local operations. Adaptation is swift and decisive:</p>
+        <p>A leading local digital services firm experiences this shift directly. Adaptation is swift and decisive:</p>
         
         <ul>
-            <li>Internal training curricula for new L1 Technical Support hires are fundamentally retooled. The focus shifts heavily towards leveraging CoPilot as the primary diagnostic and resolution tool, and crucially, developing the skills to effectively handle complex escalations where the AI fails or requires human judgment. Rote procedural knowledge becomes less important than critical thinking and advanced troubleshooting methodologies.</li>
-            
-            <li>Career progression pathways accelerate dramatically. The timeline for high-performing L1 engineers to advance into specialized L2 roles (e.g., M365 Administration, Azure Security) contracts significantly. Mastery of AI tools combined with demonstrated complex problem-solving ability allows transitions in 6-9 months, compared to the previous 18+ month average <span class="reference-tooltip" data-reference="Teknowledge interview anecdote"><span class="reference-marker">[8]</span><span class="tooltip-text">Anecdotal evidence from Teknowledge management interviews, 2026</span></span>.</li>
-            
-            <li>Recruitment criteria evolve. Teknowledge's hiring managers increasingly screen for adaptability, learning agility, and demonstrated problem-solving skills during interviews, placing less emphasis on specific pre-existing technical knowledge which can now be learned faster on the job with AI assistance.</li>
+            <li>Training for new entry-level hires is retooled. The focus shifts from rote procedural knowledge to leveraging AI as the primary tool and handling complex escalations where AI fails.</li>
+            <li>Career progression accelerates. High-performing engineers who master AI tools can advance to specialized roles in 6-9 months, down from 18+ months previously.</li>
+            <li>Recruitment criteria evolve, prioritizing adaptability, learning agility, and problem-solving skills over specific pre-existing technical knowledge.</li>
         </ul>
-        
-        <div class="full-width-chart">
-            <h3>Figure 3: AI Benchmark Forecast</h3>
-            <div class="chart-container">
-                <img src="assets/phases/Phase 2 - Early 2026.png" alt="AI Benchmark Forecast - Early 2026" style="width: 100%; height: auto; max-height: 500px; object-fit: contain;" />
-            </div>
-            <p class="chart-caption">By early 2026, extrapolated trends based on historical progress indicate continued improvement in AI capabilities relevant to CSR automation. The forecast suggests adaptability (SGD trend) is potentially entering the high 80s, while complex dialogue tracking (MultiWOZ trend) approaches the 70% JGA mark. The persistent, linear progress shown in these benchmarks reinforces the accelerating integration of AI tools observed in leading BPO operations like a leading local BPO firm. The shrinking gap suggests that AI's role is rapidly evolving beyond simple assistance towards handling more substantive parts of the workflow.</p>
-        </div>
         
         <h3>The Local Digital Workforce – Early 2026 Updates</h3>
         
@@ -366,8 +226,8 @@
                     <img src="assets/images/Amina 2.png" alt="Amina" />
                 </div>
                 <div class="persona-content">
-                    <h4>Amina (CSR)</h4>
-                    <p>At CCI Global, the initial impact is less direct than at Teknowledge, but noticeable. She uses company-provided AI assistants more frequently for knowledge retrieval and compliance checks. The automated IVR and chatbot systems handle a greater volume of simple customer queries, meaning the calls Amina receives are often slightly more complex or require more empathy than before.</p>
+                    <h4>Amina (Customer Service)</h4>
+                    <p>The impact is noticeable. Automated systems handle more simple queries, meaning the calls Amina receives are often more complex or require more empathy than before.</p>
                 </div>
             </div>
             
@@ -377,7 +237,7 @@
                 </div>
                 <div class="persona-content">
                     <h4>David (Tech Support)</h4>
-                    <p>David thrives in the new environment. His quick mastery of CoPilot for diagnostics and troubleshooting earns him recognition. He is fast-tracked onto the L2 training pathway. Teknowledge begins building out its Azure Cloud support capacity in its local hub, and David's foresight in self-studying Azure Fundamentals makes him a prime candidate for this higher-value team.</p>
+                    <p>David thrives. His quick mastery of AI diagnostic tools earns him recognition, and he is fast-tracked onto the specialist training pathway for a higher-value cloud support team.</p>
                 </div>
             </div>
             
@@ -387,7 +247,7 @@
                 </div>
                 <div class="persona-content">
                     <h4>Bella (Freelance Designer)</h4>
-                    <p>Securing freelance gigs remains challenging. While she has built a small portfolio of logos and social media graphics on Fiverr and Upwork, she observes intense price competition, particularly from sellers using AI design tools to offer rapid, low-cost services. Clients increasingly mention AI tools, sometimes asking for designs compatible with them or even providing AI-generated concepts for refinement. Earning a sustainable income requires long hours and constant bidding.</p>
+                    <p>She observes intense price competition from sellers using AI design tools. Earning a sustainable income requires long hours and constant bidding against low-cost, AI-generated services.</p>
                 </div>
             </div>
             
@@ -397,12 +257,12 @@
                 </div>
                 <div class="persona-content">
                     <h4>Eric (Software Engineer)</h4>
-                    <p>Deep into his bootcamp at The Gym, Eric finds AI coding assistants indispensable. His instructors at The Gym continue to emphasize caution, warning students like Eric, "Don't become lazy and over-reliant on AI-generated code." They stress the AI's unreliability for complex, novel problems and its tendency to produce superficially correct but structurally flawed or unmaintainable solutions without careful human guidance. News about tools like Lovable.dev generating functional front-ends adds to the pressure Eric feels – the pace of AI capability improvement seems to constantly outstrip his own learning curve.</p>
+                    <p>Deep into his bootcamp, Eric finds AI coding assistants indispensable but is warned not to become over-reliant. The pace of AI capability improvement seems to constantly outstrip his own learning curve.</p>
                 </div>
             </div>
         </div>
         
-        <p>AI benchmark scores reflect this progress. While comprehensive, standardized results for the newest models remain sparse, available data indicates continued improvement. Adaptability metrics (like SGD JGA) push towards the high 80s, and specialized models demonstrate increasing success on subsets of complex dialogue tasks (MultiWOZ), though general-purpose LLMs still show significant variance depending on prompting techniques <span class="reference-tooltip" data-reference="Pooley, 2025"><span class="reference-marker">[5]</span><span class="tooltip-text">Pooley et al., "Benchmarking Conversational AI for Customer Service Applications", 2025</span></span>. The technological capacity for automation is clearly advancing, even if widespread economic displacement has not yet occurred. The ground is shifting, setting the stage for more significant disruptions ahead.</p>
+        <p>The technological capacity for automation is clearly advancing, even if widespread economic displacement has not yet occurred. The ground is shifting, setting the stage for more significant disruptions ahead.</p>
         
         <div class="phase-nav">
             <a href="phase1.html">Previous Phase: Q3 2025</a>
@@ -412,73 +272,24 @@
     
     <div class="sidebar">
         <div class="visualization">
-            <h3>GBS Employment Progress</h3>
-            <div class="key-stats">
-                <div class="key-stat">
-                    <div class="stat-label">Current GBS Employment:</div>
-                    <div class="stat-value">5,000</div>
-                </div>
-                <div class="key-stat">
-                    <div class="stat-label">2030 Employment Target:</div>
-                    <div class="stat-value">20,000</div>
-                </div>
-            </div>
-            <div class="progress-container" style="margin-top: 15px;">
-                <div class="progress-bar">25%</div>
-            </div>
+            <h3>Employment Outlook</h3>
+            <p>Job growth continues, but early signs of AI-driven role changes are appearing. The value of adaptability and AI-collaboration skills is increasing.</p>
         </div>
         
         <div class="visualization">
-            <h3>Key Metrics</h3>
+            <h3>AI Progress</h3>
             <div class="key-stats">
-                <div class="key-stat">
-                    <div class="stat-label">National Coders Goal:</div>
-                    <div class="stat-value">1,000,000</div>
-                </div>
-                <div class="key-stat">
-                    <div class="stat-label">ICT Professionals Goal:</div>
-                    <div class="stat-value">500,000</div>
-                </div>
                 <div class="key-stat">
                     <div class="stat-label">AI Impact:</div>
                     <div class="stat-value">Selective Replacement</div>
                 </div>
                 <div class="key-stat">
-                    <div class="stat-label">AI Score on CSR Benchmark:</div>
+                    <div class="stat-label">AI Score on Service Benchmark:</div>
                     <div class="stat-value">~75%</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animation for stats loading
-            const animateValue = (obj, start, end, duration) => {
-                let startTimestamp = null;
-                const step = (timestamp) => {
-                    if (!startTimestamp) startTimestamp = timestamp;
-                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                    obj.innerHTML = Math.floor(progress * (end - start) + start);
-                    if (progress < 1) {
-                        window.requestAnimationFrame(step);
-                    }
-                };
-                window.requestAnimationFrame(step);
-            };
-            
-            // Animate numeric values
-            const numericStats = document.querySelectorAll('.stat-value');
-            numericStats.forEach(stat => {
-                const value = parseInt(stat.innerText.replace(/,/g, ''));
-                if (!isNaN(value)) {
-                    stat.innerText = '0';
-                    setTimeout(() => {
-                        animateValue(stat, 0, value, 1500);
-                    }, 300);
-                }
-            });
-        });
-    </script>
 </body>
 </html>

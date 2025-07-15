@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Nation's Digital Future: Navigating the AI Shift in Global Services (2025-2028)</title>
+    <title>A Blueprint for a Digital Future: Navigating the AI Shift (2025-2028)</title>
     <style>
         :root {
             --primary-color: #8B0000;
@@ -116,22 +116,21 @@
         
         .persona {
             display: flex;
+            align-items: center;
             background-color: #f8f8f8;
             border: 1px solid #ddd;
-            padding: 0;
+            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            overflow: hidden;
         }
         
         .persona-image {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             flex-shrink: 0;
+            margin-right: 20px;
             background-color: #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border-radius: 8px;
             overflow: hidden;
         }
         
@@ -142,7 +141,6 @@
         }
         
         .persona-content {
-            padding: 15px;
             flex-grow: 1;
         }
         
@@ -154,36 +152,69 @@
             margin-bottom: 12px;
         }
         
-        details {
-            background-color: var(--highlight-color);
-            border: 1px solid var(--border-color);
+        .decision-point {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background-color: var(--secondary-color);
+            color: white;
             border-radius: 8px;
-            padding: 10px 15px;
-            margin-bottom: 20px;
         }
-        
-        summary {
+
+        .decision-point h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .decision-paths {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .decision-path-btn {
+            display: block;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-decoration: none;
             font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 2px solid;
             cursor: pointer;
-            padding: 5px 0;
         }
-        
-        summary:hover {
-            color: var(--primary-color);
+
+        .path-a-btn {
+            background-color: skyblue;
+            color: var(--secondary-color);
+            border-color: skyblue;
         }
-        
-        .strategic-path {
-            margin: 25px 0;
+
+        .path-b-btn {
+            background-color: lightgreen;
+            color: var(--secondary-color);
+            border-color: lightgreen;
+        }
+
+        .decision-path-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .path-outcome-description {
+            display: none;
             padding: 20px;
+            margin-top: -20px;
+            margin-bottom: 20px;
             border-radius: 8px;
         }
-        
-        .path-a {
+
+        .path-a-outcome {
             background-color: rgba(135, 206, 250, 0.2);
             border-left: 5px solid skyblue;
         }
         
-        .path-b {
+        .path-b-outcome {
             background-color: rgba(144, 238, 144, 0.2);
             border-left: 5px solid lightgreen;
         }
@@ -212,89 +243,6 @@
             color: var(--primary-color);
         }
         
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            border-bottom: 1px dotted var(--primary-color);
-            cursor: help;
-        }
-        
-        .tooltip .tooltip-text {
-            visibility: hidden;
-            width: 250px;
-            background-color: var(--secondary-color);
-            color: white;
-            text-align: center;
-            border-radius: 6px;
-            padding: 10px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -125px;
-            opacity: 0;
-            transition: opacity 0.3s;
-            font-size: 0.9rem;
-        }
-        
-        .tooltip:hover .tooltip-text {
-            visibility: visible;
-            opacity: 1;
-        }
-        
-        .reference-tooltip {
-            position: relative;
-            display: inline-block;
-            cursor: help;
-        }
-        
-        .reference-marker {
-            color: var(--primary-color);
-            font-size: 0.8rem;
-            vertical-align: super;
-        }
-        
-        .reference-tooltip .tooltip-text {
-            visibility: hidden;
-            width: 250px;
-            background-color: var(--secondary-color);
-            color: white;
-            text-align: center;
-            border-radius: 6px;
-            padding: 10px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -125px;
-            opacity: 0;
-            transition: opacity 0.3s;
-            font-size: 0.9rem;
-        }
-        
-        .reference-tooltip:hover .tooltip-text {
-            visibility: visible;
-            opacity: 1;
-        }
-        
-        .progress-container {
-            width: 100%;
-            background-color: #e0e0e0;
-            border-radius: 5px;
-            margin: 10px 0;
-        }
-        
-        .progress-bar {
-            height: 20px;
-            background-color: var(--primary-color);
-            border-radius: 5px;
-            width: 17%; /* 3,400 out of 20,000 */
-            text-align: right;
-            color: white;
-            font-weight: bold;
-            padding-right: 5px;
-        }
-        
         .phase-nav {
             display: flex;
             justify-content: space-between;
@@ -318,17 +266,6 @@
             color: white;
         }
         
-        .phase-nav .inactive {
-            color: #999;
-            border-color: #999;
-            cursor: not-allowed;
-        }
-        
-        .phase-nav .inactive:hover {
-            background-color: transparent;
-            color: #999;
-        }
-        
         @media (max-width: 768px) {
             body {
                 grid-template-columns: 1fr;
@@ -345,52 +282,34 @@
             
             .persona {
                 flex-direction: column;
+                align-items: flex-start;
             }
             
             .persona-image {
                 width: 100%;
-                height: 200px;
+                height: 250px;
+                margin-right: 0;
+                margin-bottom: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <h1>A Nation's Digital Future: Navigating the AI Shift in Global Services (2025-2028)</h1>
+    <h1>A Blueprint for a Digital Future: Navigating the AI Shift (2025-2028)</h1>
     
     <div class="main-content">
         <div class="phase-tag">Phase 1: Q3 2025</div>
         <h2>The Strong Foundation & Rising Tide</h2>
         
-        <p>This nation's strategic initiatives in the digital sector are showing results. The <span class="tooltip">Global Business Services Growth Initiative (GBSGI)<span class="tooltip-text">A collaborative program between the Rwandan government and development partners to grow the BPO sector.</span></span>, backed by Harambee, the Rwanda Development Board (RDB), and development partners, have successfully attracted investment. International firms like CCI Global and Teknowledge are expanding their operations, hiring local youth for Customer Service Representative (CSR) and Level 1 Technical Support roles. The domestic GBS sector employs approximately 3,400 people <span class="reference-tooltip" data-reference="Harambee, Apr 2025"><span class="reference-marker">[1]</span><span class="tooltip-text">Harambee Employment Report, April 2025</span></span>, with concrete government and industry plans targeting 20,000 jobs within five years.</p>
+        <p>The nation's strategic initiatives in the digital sector are showing results. The national digital jobs initiative has successfully attracted investment, hiring local youth for customer service and entry-level tech support roles. The domestic digital services sector employs thousands, with ambitious goals to create tens of thousands more jobs within five years.</p>
         
-        <p>Indigenous technology firms contribute significantly. <span class="tooltip">Ojemba Palace<span class="tooltip-text">A local software development firm specializing in offshore services for European clients.</span></span>, offshoring software development to German clients, plans to scale its team of local engineers from dozens towards 200-300 by 2027. Awesomity Labs successfully leverages this nation's distinct cost-to-quality advantage in software services compared to established hubs like India or Eastern Europe <span class="reference-tooltip" data-reference="Awesomity Interview, Apr 2025"><span class="tooltip-text">Interview with Awesomity Labs CEO, April 2025</span></span>.</p>
-        
-        <p>Simultaneously, the freelance economy across the region sees growth, with local youth increasingly accessing global platforms like Upwork and Fiverr via improving national connectivity. The prevailing sentiment is one of measured optimism: this nation's policies are yielding jobs, and its reputation for stability and a motivated, adaptable workforce attracts international interest.</p>
-        
-        <p>These efforts align with ambitious national targets: developing 1 million coders and 500,000 ICT professionals. And even though these targets are a long way from the actual numbers achieved on the ground, it feels like this nation is moving in the right direction. The question most stakeholders believe the government is asking them is, "How do we accelerate this progress?" The obvious answers appear to be more of the same - build on existing successes - more BPO CSR roles, more ITO tech support and software development roles.</p>
-        
-        <details>
-            <summary>Geopolitical Factors</summary>
-            <p>Geopolitical undercurrents persist. US tariff policies, while not directly targeting services yet, create background noise. More specific threats of sanctions against this nation introduce a low-level uncertainty regarding the long-term stability of demand from key Western markets, subtly reinforcing the strategic importance of cultivating a diverse client portfolio for the GBS sector.</p>
-        </details>
+        <p>Indigenous technology firms also contribute significantly, leveraging the nation's distinct cost-to-quality advantage. Simultaneously, the freelance economy sees growth. The prevailing sentiment is one of measured optimism: the nation's policies are yielding jobs, and its reputation for stability and a motivated workforce attracts international interest.</p>
         
         <h3>AI Impact: Current State</h3>
-        <p>AI, in its current iteration, acts primarily as an augmentation tool. Teknowledge deploys Microsoft CoPilot across its global workforce, pursuing an "AI First" strategy <span class="reference-tooltip" data-reference="Teknowledge Interview, Apr 2025"><span class="reference-marker">[3]</span><span class="tooltip-text">Interview with Teknowledge Rwanda Director, April 2025</span></span>. AI-driven accent adaptation technology is already utilized in local contact centers to improve communication clarity <span class="reference-tooltip" data-reference="Harambee Interview, Apr 2025"><span class="reference-marker">[4]</span><span class="tooltip-text">Interview with Harambee Program Director, April 2025</span></span>.</p>
-        
-        <p>Software developers at firms like Ojemba and Awesomity report significant productivity gains using AI coding assistants and AI-integrated IDEs like Cursor. However, core cognitive tasks remain human-led. AI performance on complex, multi-turn conversational benchmarks like MultiWOZ Joint Goal Accuracy (JGA) remains moderate, typically in the ~55-65% range, demonstrating limitations in reliably handling nuanced, context-heavy interactions autonomously <span class="reference-tooltip" data-reference="Pooley, 2025"><span class="reference-marker">[5]</span><span class="tooltip-text">Pooley et al., "Benchmarking Conversational AI for Customer Service Applications", 2025</span></span>.</p>
-        
-        <p>Early adopters use AI to augment their work, and see impressive productivity gains of 10-50% but because it is unevenly adopted it doesn't show up in terms of overall hiring trends.</p>
+        <p>AI, in its current iteration, acts primarily as an augmentation tool. Service providers deploy AI assistants to their workforce, and AI-driven accent adaptation technology is utilized in contact centers. Software developers report significant productivity gains using AI coding assistants. However, core cognitive tasks remain human-led, as AI performance on complex conversational benchmarks remains moderate.</p>
         
         <div class="full-width-chart">
-            <h3>Figure 1: AI Benchmark Progress</h3>
-            <div class="chart-container">
-                <img src="assets/phases/Phase 1 - Mid 2025.png" alt="AI Progress on Adaptability vs. Complex Tracking" style="width: 100%; height: auto; max-height: 500px; object-fit: contain;" />
-            </div>
-            <p class="chart-caption">AI models show good adaptability (blue circles, ~75-80%) but struggle with complex multi-turn dialogues (green squares, below 65%). Growth trends of +4.3%/yr and +6.8%/yr suggest future progress but remain below the 95% automation threshold.</p>
-        </div>
-        
-        <div class="full-width-chart">
-            <h3>Figure 2: AI Task Capabilities Growth</h3>
+            <h3>Figure 1: AI Task Capabilities Growth</h3>
             <div class="chart-container">
                 <img src="assets/images/METR.png" alt="METR chart showing AI task capabilities growth" style="width: 100%; height: auto; max-height: 500px; object-fit: contain;" />
             </div>
@@ -405,8 +324,8 @@
                     <img src="assets/images/Amina 1.png" alt="Amina" />
                 </div>
                 <div class="persona-content">
-                    <h4>Amina (CSR)</h4>
-                    <p>Recently completed Harambee's intensive 7-week work readiness and B2 English program. She has just started as a Customer Service Representative at CCI Global, handling inquiries for an international telecom client via phone and chat.</p>
+                    <h4>Amina (Customer Service)</h4>
+                    <p>Recently completed an intensive work readiness and professional English program. She has just started as a Customer Service Representative at a large international firm, handling inquiries for a global telecom client.</p>
                 </div>
             </div>
             
@@ -416,7 +335,7 @@
                 </div>
                 <div class="persona-content">
                     <h4>David (Tech Support)</h4>
-                    <p>A motivated Computer Science graduate from a leading national university. Anticipating industry needs, he completed the Azure Fundamentals certification online. He is now enrolled in Teknowledge's rigorous 3-month internal training program, preparing for a Level 1 Microsoft 365 technical support role.</p>
+                    <p>A motivated Computer Science graduate who completed an Azure Fundamentals certification online. He is now in a major service provider's rigorous 3-month training program, preparing for an entry-level technical support role.</p>
                 </div>
             </div>
             
@@ -426,7 +345,7 @@
                 </div>
                 <div class="persona-content">
                     <h4>Bella (Freelance Designer)</h4>
-                    <p>Holds a passion for visual communication and recently finished a 6-month online graphic design course (Canva, Adobe fundamentals). She is actively building her portfolio by bidding on entry-level logo and social media graphic design gigs on Upwork and Fiverr.</p>
+                    <p>Finished a 6-month online graphic design course and is now actively building her portfolio by bidding on entry-level logo and social media design gigs on Upwork and Fiverr.</p>
                 </div>
             </div>
             
@@ -436,46 +355,30 @@
                 </div>
                 <div class="persona-content">
                     <h4>Eric (Software Engineer)</h4>
-                    <p>A high-potential Computer Science graduate selected for The Gym's competitive 6-month software development bootcamp. His training, partly sponsored by Ojemba Palace, focuses on modern Javascript frameworks (React/Next.js) and agile methodologies for international clients.</p>
+                    <p>A high-potential Computer Science graduate selected for a competitive 6-month software development bootcamp, focusing on modern Javascript frameworks and agile methodologies for international clients.</p>
                 </div>
             </div>
         </div>
         
-        <h3>Strategic Crossroads</h3>
-        <p>This progress prompts strategic discussions within the National Digital Strategy Council (NDSC). Briefings present a dual picture.</p>
-        
-        <p>One perspective highlights the clear success and job creation momentum driven by the current focus on CSR and entry-level technical support – pathways proving effective for rapid youth employment absorption.</p>
-        
-        <p>Another perspective, however, presents analysis of accelerating global AI capabilities <span class="reference-tooltip" data-reference="Pooley, 2025; Caribou Digital/Genesis Analytics, 2024"><span class="reference-marker">[5,6]</span><span class="tooltip-text">Pooley et al. (2025) and Caribou Digital/Genesis Analytics report on "Digital Employment Futures in Africa" (2024)</span></span>. It raises concerns about the medium-term automation vulnerability of precisely these high-volume, routine task-based roles that underpin current growth, referencing AI progress on benchmarks and early shifts in global BPO strategies.</p>
-        
-        <p>The NDSC faces a critical Strategic Crossroads: Should this nation continue to concentrate resources on scaling the proven, high-volume CSR and L1 support pathways to maximize immediate job numbers and meet its employment targets and broader digital skills goals? Or should it proactively diversify investment now towards building capabilities in potentially more resilient, higher-value digital roles, even if those pathways are initially less scalable or have less certain immediate demand?</p>
-        
-        <h3>Decision Pathways</h3>
-        
-        <div class="strategic-path path-a">
-            <h4>Path A: Momentum Focus</h4>
-            <p>The Council acknowledges the AI risk intellectually but determines that the immediate economic and employment benefits of scaling the existing GBS model outweigh the uncertain future threat. Investment priorities remain largely unchanged, focusing on optimizing and expanding current CSR and L1 technical support training pipelines to meet stated job targets. Diversification into other pathways is deferred pending clearer market signals.</p>
+        <div class="decision-point">
+            <h2>A Critical Choice for the Nation</h2>
+            <p>This progress prompts strategic discussions within the national digital taskforce. One perspective highlights the clear success and job creation momentum. Another, however, presents analysis of accelerating global AI capabilities, raising concerns about the medium-term automation vulnerability of the very roles that underpin current growth.</p>
+            <p>The taskforce faces a critical choice: Should the nation continue to scale the proven, high-volume pathways to maximize immediate job numbers? Or should it proactively diversify investment now towards building capabilities in more resilient, higher-value digital roles?</p>
+            <div class="decision-paths">
+                <div id="path-a-btn" class="decision-path-btn path-a-btn">Path A: Momentum Focus</div>
+                <div id="path-b-btn" class="decision-path-btn path-b-btn">Path B: Proactive Adaptation</div>
+            </div>
         </div>
         
-        <div class="strategic-path path-b">
-            <h4>Path B: Proactive Adaptation</h4>
-            <p>The Council concludes that the AI automation risk is credible and requires immediate strategic adjustment. While continuing to support the existing GBS growth, a significant portion of new skills development funding is ringfenced starting early 2026 to actively pilot, develop, and scale pathways for roles deemed more resilient.</p>
-            
-            <details>
-                <summary>Potential Resilient Roles</summary>
-                <ul>
-                    <li><strong>Advanced Technical Support:</strong> Tier 2-3 support requiring deeper troubleshooting skills</li>
-                    <li><strong>AI Oversight Specialists:</strong> Human monitoring and correction of AI systems</li>
-                    <li><strong>Specialized Creative Services:</strong> Culturally-nuanced content creation</li>
-                    <li><strong>Data Annotation Experts:</strong> High-quality training data creation</li>
-                    <li><strong>Client Relationship Management:</strong> Complex stakeholder communication</li>
-                </ul>
-            </details>
-            
-            <p>A dedicated NDSC subcommittee is established to closely monitor global AI trends, assess their impact on the local market, and provide ongoing recommendations for curriculum and pathway portfolio adjustments.</p>
+        <div id="path-a-outcome" class="path-outcome-description path-a-outcome">
+            <h3>Path A: Momentum Focus</h3>
+            <p>The taskforce acknowledges the AI risk but determines the immediate benefits of scaling the existing model outweigh the uncertain future threat. Investment priorities remain focused on expanding current training pipelines. Diversification is deferred.</p>
         </div>
         
-        <p>The chosen path in late 2025 will significantly shape this nation's capacity to navigate the accelerating AI-driven transformations in the global digital economy over the subsequent years.</p>
+        <div id="path-b-outcome" class="path-outcome-description path-b-outcome">
+            <h3>Path B: Proactive Adaptation</h3>
+            <p>The taskforce concludes the AI risk is credible and requires immediate adjustment. While supporting existing growth, a significant portion of new funding is ringfenced to pilot and scale pathways for roles deemed more resilient to automation.</p>
+        </div>
         
         <div class="phase-nav">
             <a href="summary.html">Summary</a>
@@ -485,39 +388,19 @@
     
     <div class="sidebar">
         <div class="visualization">
-            <h3>GBS Employment Progress</h3>
-            <div class="key-stats">
-                <div class="key-stat">
-                    <div class="stat-label">Current GBS Employment:</div>
-                    <div class="stat-value">3,400</div>
-                </div>
-                <div class="key-stat">
-                    <div class="stat-label">2030 Employment Target:</div>
-                    <div class="stat-value">20,000</div>
-                </div>
-            </div>
-            <div class="progress-container" style="margin-top: 15px;">
-                <div class="progress-bar">17%</div>
-            </div>
+            <h3>Employment Outlook</h3>
+            <p>Initial job growth is strong, with ambitious targets for the coming years. The digital services sector is a key source of new youth employment.</p>
         </div>
         
         <div class="visualization">
-            <h3>Key Metrics</h3>
+            <h3>AI Progress</h3>
             <div class="key-stats">
-                <div class="key-stat">
-                    <div class="stat-label">National Coders Goal:</div>
-                    <div class="stat-value">1,000,000</div>
-                </div>
-                <div class="key-stat">
-                    <div class="stat-label">ICT Professionals Goal:</div>
-                    <div class="stat-value">500,000</div>
-                </div>
                 <div class="key-stat">
                     <div class="stat-label">AI Impact:</div>
                     <div class="stat-value">Augmentation</div>
                 </div>
                 <div class="key-stat">
-                    <div class="stat-label">AI Score on CSR Benchmark:</div>
+                    <div class="stat-label">AI Score on Service Benchmark:</div>
                     <div class="stat-value">~65%</div>
                 </div>
             </div>
@@ -526,30 +409,19 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Animation for stats loading
-            const animateValue = (obj, start, end, duration) => {
-                let startTimestamp = null;
-                const step = (timestamp) => {
-                    if (!startTimestamp) startTimestamp = timestamp;
-                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                    obj.innerHTML = Math.floor(progress * (end - start) + start);
-                    if (progress < 1) {
-                        window.requestAnimationFrame(step);
-                    }
-                };
-                window.requestAnimationFrame(step);
-            };
-            
-            // Animate numeric values
-            const numericStats = document.querySelectorAll('.stat-value');
-            numericStats.forEach(stat => {
-                const value = parseInt(stat.innerText.replace(/,/g, ''));
-                if (!isNaN(value)) {
-                    stat.innerText = '0';
-                    setTimeout(() => {
-                        animateValue(stat, 0, value, 1500);
-                    }, 300);
-                }
+            const pathABtn = document.getElementById('path-a-btn');
+            const pathBBtn = document.getElementById('path-b-btn');
+            const pathAOutcome = document.getElementById('path-a-outcome');
+            const pathBOutcome = document.getElementById('path-b-outcome');
+
+            pathABtn.addEventListener('click', function() {
+                pathAOutcome.style.display = 'block';
+                pathBOutcome.style.display = 'none';
+            });
+
+            pathBBtn.addEventListener('click', function() {
+                pathBOutcome.style.display = 'block';
+                pathAOutcome.style.display = 'none';
             });
         });
     </script>
